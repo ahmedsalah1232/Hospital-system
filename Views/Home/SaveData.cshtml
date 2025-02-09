@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/SaveData.css">
+    <title>Document</title>
+</head>
+<body>
+    <script>window.alert("Your appointment is Registed");</script>
+    <h1>Appointments</h1>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Appointment Date</th>
+                    <th>Appointment Time</th>
+                    <th>Doctor Name</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.PatientName</td>
+                        <td>@item.AppointmentDate</td>
+                        <td>@item.AppointmentTime</td>
+                        <td>@item.DoctorId</td>
+
+                    </tr>
+                }
+                <tbody>
+        </table>
+    </div>
+
+</body>
+</html>

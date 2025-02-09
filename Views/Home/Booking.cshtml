@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/BookingStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="display:block;margin-left:10px;">Hospital`s Doctors</h1 >
+    @foreach(var item in Model)
+    {
+        <div class="container" style="margin-top:50px;">
+        <div class="">
+                <div class="">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img src="~/images/@item.Img" />
+                    </div>
+
+                    <div class="card-heading">
+                            @item.DoctorName
+                    </div>
+                    <div class="card-text">
+                        Audi Q8 is a full-size luxury crossover SUV coupé made by Audi that was launched in 2018.
+                    </div>
+                    <div class="card-text">
+                            <h4>@item.Specialization</h4>
+                    </div>
+                        <a href="/Home/Details/@item.DoctorId" class="card-button"> Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ }
+</body>
+</html>
